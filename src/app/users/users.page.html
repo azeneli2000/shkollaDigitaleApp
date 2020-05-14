@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>users</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-button (click)='addUser()'>Perdorues i ri</ion-button>
+  <ion-list>
+    <ion-item-sliding *ngFor='let u of arrayUsers'>
+      <ion-item>
+        {{u.emri}} {{u.mbiemri}}
+        <ion-item-options side="end">
+
+          <ion-button color="danger" (click)="deleteUser(u)">
+            <ion-icon name="trash"></ion-icon>Fshi
+          </ion-button>
+        </ion-item-options>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

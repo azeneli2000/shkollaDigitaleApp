@@ -1,1 +1,39 @@
 
+.detyrekontrolli {
+    --background : 	#0275d8;
+}
+
+.projekt {
+    --background : 	#f0ad4e;
+    ;
+
+   
+}
+.vazhduar{
+    --background : 	#5bc0de;
+}
+
+.perfundimtare{
+
+    --background : 	#d9534f;
+}
+.perfundimtareNote{
+
+    --background : 	#d9534f;
+    --color : #f7f7f7;	
+
+}
+.listItem{
+
+    --background	: #292b2c;
+
+
+}
+ion-item[button] {
+    pointer-events: initial !important;
+}
+
+.activeItem{
+    --background : 	#d9534f;
+    --color : #f7f7f7;	
+}

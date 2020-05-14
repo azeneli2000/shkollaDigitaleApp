@@ -1,14 +1,83 @@
+<!-- menu -->
+<ion-menu side="start" menuId="first" contentId="main">
+  <ion-header>
+    <ion-toolbar color="primary" slot="start">
+      <ion-title>
+        <ion-menu-toggle>
+          <ion-menu-button>Menu</ion-menu-button>
+        </ion-menu-toggle>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-menu-toggle>
+      <ion-item button (click)="t1Click()" [ngClass]="{'activeItem': tremestri=='Tremestri I'}">Tremestri I</ion-item>
+    </ion-menu-toggle>
+    <ion-menu-toggle>
+      <ion-item button (click)="t2Click()" [ngClass]="{'activeItem': tremestri=='Tremestri II'}">Tremestri II</ion-item>
+    </ion-menu-toggle>
+    <ion-menu-toggle>
+      <ion-item button (click)="t3Click()" [ngClass]="{'activeItem': tremestri=='Tremestri III'}">Tremestri III
+      </ion-item>
+    </ion-menu-toggle>
+    <ion-menu-toggle>
+      <ion-item button (click)="perfundimtareClick()" [ngClass]="{'activeItem': tremestri=='Perfundimtare'}">
+        Perfundimtare</ion-item>
+    </ion-menu-toggle>
+    <ion-menu-toggle>
+      <ion-item button routerLink="/users">Perdoruesit</ion-item>
+    </ion-menu-toggle>
+
+    <ion-menu-toggle>
+      <ion-item button (click)="shpjegimeClick()">Shpjegime</ion-item>
+    </ion-menu-toggle>
+  </ion-content>
+</ion-menu>
+
+<!-- toolbar -->
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="primary" autoHide="false"> </ion-menu-button>
+    </ion-buttons>
+
+    <ion-item>
+      <ion-select interface="popover" (ionChange)="changeLogedInUser($event)">
+        <ion-select-option *ngFor="let u of usersArray" [value]="u" [selected]="u.emri==emri">{{u.emri}} {{u.mbiemri}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <label slot="end">Klasa {{klasa}} {{indeksi}}</label>
     <ion-title>
-      Ionic Blank
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Terhiqe" refreshingSpinner="circles"
+      refreshingText="Perditesim...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-input [value]="tokenNot"></ion-input>
+  <ion-list>
+    <ion-list-header>
+      <ion-row style="align-items: center;flex-wrap: nowrap">
+        <ion-badge class="perfundimtareNote">{{tremestri}}</ion-badge>
+      </ion-row>
+    </ion-list-header>
+
+    <ion-item *ngFor='let l of lendet'>
+      <ion-label>
+        <ion-row> <label class="ion-text-capitalize"> {{l.emri | lowercase}}</label> </ion-row>
+        <ion-row>
+          <ng-container *ngFor='let p of l.notat'>
+            <ion-badge [ngClass]="{'vazhduar': p.momentale , 'projekt': p.projekt}"> {{p.vlersimi }} </ion-badge>&nbsp;
+          </ng-container>
+        </ion-row>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
+<!-- <ion-input type="text" [(ngModel)]  ="tokenNot"></ion-input> -->

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ShkollaDigitale</string>
+    <string name="title_activity_main">ShkollaDigitale</string>
+    <string name="package_name">com.infonota.infonota</string>
+    <string name="custom_url_scheme">com.infonota.infonota</string>
+</resources>

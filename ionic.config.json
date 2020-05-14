@@ -1,5 +1,7 @@
 {
-  "name": "capApp",
-  "integrations": {},
+  "name": "ShkollaDigitale",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

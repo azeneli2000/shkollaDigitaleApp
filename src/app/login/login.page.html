@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-input type = "text" [(ngModel)]  = "user" ></ion-input>
+<ion-input type = "text" [(ngModel)]  = "password" ></ion-input>
+<ion-button (click) = "loginUser()" >Login</ion-button>
+</ion-content>

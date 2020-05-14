@@ -1,0 +1,18 @@
+{
+  "appId": "com.infonota.infonota",
+  "appName": "ShkollaDigitale",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {},
+  "plugins": {
+    "PushNotifications": {
+      "presentationOptions": [
+        "badge",
+        "sound",
+        "alert"
+      ]
+    },
+    "allowMixedContent": true
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "765824469126",
+    "firebase_url": "https://shkolladigitale-31d8a.firebaseio.com",
+    "project_id": "shkolladigitale-31d8a",
+    "storage_bucket": "shkolladigitale-31d8a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765824469126:android:d2601ab513495e8aa1a907",
+        "android_client_info": {
+          "package_name": "com.infonota.infonota"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "765824469126-jsi0pvtqrb2vq3lln7fckna8vuudvvpo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaZpDEYK0MY_UAh7oqUWXNfr_-XG4VHIc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "765824469126-jsi0pvtqrb2vq3lln7fckna8vuudvvpo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
